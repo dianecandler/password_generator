@@ -1,8 +1,62 @@
 // defining global varables
-let upperCase = ["A","B","C",]
-let lowerCase = ["a",]
-let number
-let symbol
+let upperCase = [
+	'A',
+	'B',
+	'C',
+	'D',
+	'E',
+	'F',
+	'G',
+	'H',
+	'I',
+	'J',
+	'K',
+	'L',
+	'M',
+	'N',
+	'O',
+	'P',
+	'Q',
+	'R',
+	'S',
+	'T',
+	'U',
+	'V',
+	'W',
+	'X',
+	'Y',
+	'Z'
+];
+let lowerCase = [
+	'a',
+	'b',
+	'c',
+	'd',
+	'e',
+	'f',
+	'g',
+	'h',
+	'i',
+	'j',
+	'k',
+	'l',
+	'm',
+	'n',
+	'o',
+	'p',
+	'q',
+	'r',
+	's',
+	't',
+	'u',
+	'v',
+	'w',
+	'x',
+	'y',
+	'x'
+];
+let number = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ];
+let symbol = [ '`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '*', '(', ')' ];
 
 /*
 1. create variable - done  
@@ -12,19 +66,18 @@ let symbol
 5. if yes bring varible and run / if no ask them to try again when ready
 6. display password
 */
-function generatePassword(){
-  console.log("Look below") 
-  for(var i=0; i<upperCase.length; i++)  {
-      console.log(upperCase[i]);
-  }
+function generatePassword () {
+	console.log('Look below');
+	for (var i = 0; i < upperCase.length; i++) {
+		console.log(upperCase[i]);
+	}
 }
-
 
 // {
 // 	// begin with prompts and input numbers of characters
 // 	//prompt for # "characters" user wants (between 8-128)
 //   var Characterprompt = prompt("How many characters in the password, must be between 8 and 128.");
-				
+
 // 	//Test is input is #
 // 	if (isNaN(Characterprompt)) {
 // 	  i=0
@@ -49,7 +102,7 @@ function generatePassword(){
 //     if (lowercase) {
 //       var strlow = "abcdefghijklmnopqrstuvwxyz";
 //       arrchar.push(strlow.split(""));
-//     } 
+//     }
 //   //ask the user if they want uppercase
 //     //store it in a variable
 //     var uppercase = confirm("Do you want to use uppercase characters?");
@@ -74,10 +127,10 @@ function generatePassword(){
 //       var strsym = "!#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~";
 //       arrchar.push(strsym.split(''));
 //     }
-    
+
 //     //the array needs to be flattened
 //     arrchar = [].concat.apply([], arrchar);
-    
+
 //     var randchar;
 //     //Now to make the password!
 //     var arrpasscode = [];
@@ -88,9 +141,9 @@ function generatePassword(){
 //       for (var i = 0; i < numCharacter; i++) {
 //         randchar = Math.floor(Math.random() * Math.floor(arrchar.length));
 //         var randnum = parseInt(randchar);
-//         arrpasscode = arrpasscode.concat([arrchar[randnum]]); 
+//         arrpasscode = arrpasscode.concat([arrchar[randnum]]);
 //         //Tried to tidy code by combining into line below but kept getting errors
-//         //arrpasscode = arrpasscode.concat([arrchar[parseInt(Math.floor(Math.random() * Math.floor(arrchar.length)))]]); 
+//         //arrpasscode = arrpasscode.concat([arrchar[parseInt(Math.floor(Math.random() * Math.floor(arrchar.length)))]]);
 //       }
 //     }
 //     console.log(arrpasscode);
@@ -131,4 +184,4 @@ function generatePassword(){
 
 // // 	return password;
 
-document.querySelector("#myBtn").addEventListener("click", generatePassword);
+document.querySelector('#myBtn').addEventListener('click', generatePassword);
