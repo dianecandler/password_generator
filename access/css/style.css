@@ -5,6 +5,20 @@
 	margin-top: 12px;
 	margin-bottom: 12px;
 	background-color: green;
+	padding: 5px;
+	width: 80%;
+	justify-content: center;
+	color: ivory;
+}
+#display {
+	background-color: grey;
+	margin-top: 12px;
+	margin-bottom: 12px;
 	padding: 20px;
-	width: 100%;
+	color: aqua;
+	width: 50%;
+	justify-content: top;
+}
+textarea {
+	color: white;
 }

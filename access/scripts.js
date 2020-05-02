@@ -1,6 +1,5 @@
 // defining global varables
-let upperCase = [
-	'A',
+let upperCase = ['A',
 	'B',
 	'C',
 	'D',
@@ -25,8 +24,7 @@ let upperCase = [
 	'W',
 	'X',
 	'Y',
-	'Z'
-];
+	'Z'];
 let lowerCase = [
 	'a',
 	'b',
@@ -59,20 +57,37 @@ let number = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ];
 let symbol = [ '`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '*', '(', ')', '<', '>', '?', ',', '.', '/' ];
 
 /*
-1. create variable - done  
-2. link submit button on click to function called generate password
+1. create global variable - done  
+2. link submit button on-click to deliver function called generatePassword
 3. after prompt asks how many characters between 8-128
 4. confirm - upper, lower, number, symbols
 5. if yes bring varible and run / if no ask them to try again when ready
 6. display password
 */
-function generatePassword () {
+function generatePassword (upperCase) {
 	console.log('Look below');
 	for (var i = 0; i < upperCase.length; i++) {
 		console.log(upperCase[i]);
-	}
+  }
+  // Uppercase
+function generatePassword (lowerCase) {
+    console.log('Look below');
+    for (var i = 0; i < lowerCase.length; i++) {
+      console.log(lowerCase[i]);
+    }
+    function generatePassword (number) {
+      console.log('Look below');
+      for (var i = 0; i < number.length; i++) {
+        console.log(number[i]);
+      }
+      // Uppercase
+    function generatePassword (symbol) {
+        console.log('Look below');
+        for (var i = 0; i < symbol.length; i++) {
+          console.log(symbol[i]);
+        }
 }
-
+// alert(generate password)
 // {
 // 	// begin with prompts and input numbers of characters
 // 	//prompt for # "characters" user wants (between 8-128)
