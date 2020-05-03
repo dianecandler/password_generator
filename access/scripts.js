@@ -1,60 +1,17 @@
 // defining global varables
-let upperCase = ['A',
-	'B',
-	'C',
-	'D',
-	'E',
-	'F',
-	'G',
-	'H',
-	'I',
-	'J',
-	'K',
-	'L',
-	'M',
-	'N',
-	'O',
-	'P',
-	'Q',
-	'R',
-	'S',
-	'T',
-	'U',
-	'V',
-	'W',
-	'X',
-	'Y',
-	'Z'];
-let lowerCase = [
-	'a',
-	'b',
-	'c',
-	'd',
-	'e',
-	'f',
-	'g',
-	'h',
-	'i',
-	'j',
-	'k',
-	'l',
-	'm',
-	'n',
-	'o',
-	'p',
-	'q',
-	'r',
-	's',
-	't',
-	'u',
-	'v',
-	'w',
-	'x',
-	'y',
-	'x'
-];
+let upperCase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z' ];
+let lowerCase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' ];
 let number = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ];
 let symbol = [ '`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '*', '(', ')', '<', '>', '?', ',', '.', '/' ];
+let passwordarr = [];
+
+}
+// button code from index.html below
+/* <button onclick="myFunction()">Generate Password</button> */
+
+function myfunction () {
+	alert('Generate Password');
+}
 
 /*
 1. create global variable - done  
@@ -64,29 +21,32 @@ let symbol = [ '`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '*', '(', ')', 
 5. if yes bring varible and run / if no ask them to try again when ready
 6. display password
 */
-function generatePassword (upperCase) {
+function generatePassword (pizzaface) {
 	console.log('Look below');
-	for (var i = 0; i < upperCase.length; i++) {
-		console.log(upperCase[i]);
-  }
-  // Uppercase
-function generatePassword (lowerCase) {
-    console.log('Look below');
-    for (var i = 0; i < lowerCase.length; i++) {
-      console.log(lowerCase[i]);
-    }
-    function generatePassword (number) {
-      console.log('Look below');
-      for (var i = 0; i < number.length; i++) {
-        console.log(number[i]);
-      }
-      // Uppercase
-    function generatePassword (symbol) {
-        console.log('Look below');
-        for (var i = 0; i < symbol.length; i++) {
-          console.log(symbol[i]);
-        }
-}
+	for (var i = 0; i < pizzaface.length; i++) {
+		console.log('added something to passwordarr');
+		passwordarr.push(pizzaface[i]);
+	}
+
+
+//   // Uppercase
+// function generatePassword (lowerCase) {
+//     console.log('Look below');
+//     for (var i = 0; i < lowerCase.length; i++) {
+//       console.log(lowerCase[i]);
+//     }
+//     function generatePassword (number) {
+//       console.log('Look below');
+//       for (var i = 0; i < number.length; i++) {
+//         console.log(number[i]);
+//       }
+//       // Uppercase
+//     function generatePassword (symbol) {
+//         console.log('Look below');
+//         for (var i = 0; i < symbol.length; i++) {
+//           console.log(symbol[i]);
+//         }
+// }
 // alert(generate password)
 // {
 // 	// begin with prompts and input numbers of characters
@@ -110,41 +70,8 @@ function generatePassword (lowerCase) {
 
 // }
 
-// //ask the user if they want lowercase
-//     //store it in a variable
-//     var lowercase = confirm("Do you want to use lowercase characters?");
-//     //create lowercase array
-//     if (lowercase) {
-//       var strlow = "abcdefghijklmnopqrstuvwxyz";
-//       arrchar.push(strlow.split(""));
-//     }
-//   //ask the user if they want uppercase
-//     //store it in a variable
-//     var uppercase = confirm("Do you want to use uppercase characters?");
-//     //create uppercase array
-//     if (uppercase=true) {
-//       var strup = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//       arrchar.push(strup.split(''));
-//     }
-//   //ask the user if they want numeric
-//     //store it in a variable
-//     var numbers = confirm("Do you want to use numbers?");
-//     //create uppercase array
-//     if (numbers=true) {
-//       var strnum = "0123456789";
-//       arrchar.push(strnum.split(''));
-//     }
-//   //ask the user if they want special characters
-//     //store it in a variable
-//     var symbols = confirm("Do you want to use special characters?");
-//     //create uppercase array
-//     if (symbols=true) {
-//       var strsym = "!#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~";
-//       arrchar.push(strsym.split(''));
-//     }
-
-//     //the array needs to be flattened
-//     arrchar = [].concat.apply([], arrchar);
+//the array needs to be flattened
+arrchar = [].concat.apply([], arrchar);
 
 //     var randchar;
 //     //Now to make the password!
@@ -157,7 +84,7 @@ function generatePassword (lowerCase) {
 //         randchar = Math.floor(Math.random() * Math.floor(arrchar.length));
 //         var randnum = parseInt(randchar);
 //         arrpasscode = arrpasscode.concat([arrchar[randnum]]);
-//         //Tried to tidy code by combining into line below but kept getting errors
+
 //         //arrpasscode = arrpasscode.concat([arrchar[parseInt(Math.floor(Math.random() * Math.floor(arrchar.length)))]]);
 //       }
 //     }
@@ -199,4 +126,4 @@ function generatePassword (lowerCase) {
 
 // // 	return password;
 
-document.querySelector('#myBtn').addEventListener('click', generatePassword);
+document.querySelector('#myBtn').addEventListener('click', generatePassword(upperCase));
