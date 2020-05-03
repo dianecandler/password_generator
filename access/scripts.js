@@ -1,11 +1,65 @@
 // defining global varables
-let upperCase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z' ];
-let lowerCase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' ];
+let upperCase = [
+	'A',
+	'B',
+	'C',
+	'D',
+	'E',
+	'F',
+	'G',
+	'H',
+	'I',
+	'J',
+	'K',
+	'L',
+	'M',
+	'N',
+	'O',
+	'P',
+	'Q',
+	'R',
+	'S',
+	'T',
+	'U',
+	'V',
+	'W',
+	'X',
+	'Y',
+	'Z'
+];
+let lowerCase = [
+	'a',
+	'b',
+	'c',
+	'd',
+	'e',
+	'f',
+	'g',
+	'h',
+	'i',
+	'j',
+	'k',
+	'l',
+	'm',
+	'n',
+	'o',
+	'p',
+	'q',
+	'r',
+	's',
+	't',
+	'u',
+	'v',
+	'w',
+	'x',
+	'y',
+	'z'
+];
 let number = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ];
 let symbol = [ '`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '*', '(', ')', '<', '>', '?', ',', '.', '/' ];
 let passwordarr = [];
+let finalpassword = '';
 
-}
 // button code from index.html below
 /* <button onclick="myFunction()">Generate Password</button> */
 
@@ -27,103 +81,52 @@ function generatePassword (pizzaface) {
 		console.log('added something to passwordarr');
 		passwordarr.push(pizzaface[i]);
 	}
+}
 
+function askQuestions () {
+	//ask how many characters you want
+	var characterprompt = prompt('How many characters do you want in your password, must be between 8 and 128', '10');
+	var numCharacters = parseInt(characterprompt);
+	if (Number.isInteger(numCharacters) === false) {
+		return alert('Invalid Input');
+	}
+	else {
+		if (numCharacters < 8 || numCharacters > 128) {
+			return alert('number is out of range');
+		}
+		else {
+			alert('number is valid');
+		}
+	}
+	//ask for what type of characters you want
+	var r = confirm('Do you want UpperCase Letters?');
+	if (r == true) {
+		generatePassword(upperCase);
+	}
+	r = confirm('Do you want lower case letters?');
+	if (r == true) {
+		generatePassword(lowerCase);
+	}
+	r = confirm('Do you want numbers?');
+	if (r == true) {
+		generatePassword(number);
+	}
+	r = confirm('Do you want symbols?');
+	if (r == true) {
+		generatePassword(symbol);
+	}
+	//tell use if password does not contain any characters
+	if (passwordarr.length < 1) {
+		return alert('there are no characters for the password');
+	}
+	//now to put it all together
+	for (var incrementingnumber = 0; incrementingnumber < numCharacters; incrementingnumber++) {
+		var letterAdd = passwordarr[Math.floor(Math.random() * passwordarr.length)];
+		finalpassword = finalpassword + letterAdd.toString();
+	}
+	//make code to put password on html
+	var exampleya = document.getElementById('exampleya');
+	exampleya.textContent += finalpassword;
+}
 
-//   // Uppercase
-// function generatePassword (lowerCase) {
-//     console.log('Look below');
-//     for (var i = 0; i < lowerCase.length; i++) {
-//       console.log(lowerCase[i]);
-//     }
-//     function generatePassword (number) {
-//       console.log('Look below');
-//       for (var i = 0; i < number.length; i++) {
-//         console.log(number[i]);
-//       }
-//       // Uppercase
-//     function generatePassword (symbol) {
-//         console.log('Look below');
-//         for (var i = 0; i < symbol.length; i++) {
-//           console.log(symbol[i]);
-//         }
-// }
-// alert(generate password)
-// {
-// 	// begin with prompts and input numbers of characters
-// 	//prompt for # "characters" user wants (between 8-128)
-//   var Characterprompt = prompt("How many characters in the password, must be between 8 and 128.");
-
-// 	//Test is input is #
-// 	if (isNaN(Characterprompt)) {
-// 	  i=0
-// 	  alert("Input is not a number, please input valid number");
-// 	} else {
-// 	 //make answer # type using numCharacter
-// 	var numCharacter = parseInt(Characterprompt);
-// 	  //Test # of characters is in range
-// 	  if (numCharacter < 8 || numCharacter > 128) {
-// 		i=0
-// 		alert("You selected a number that is not supported. Select 8-128");
-// 				  } else {i=1}
-// 				}
-// 			  }
-
-// }
-
-//the array needs to be flattened
-arrchar = [].concat.apply([], arrchar);
-
-//     var randchar;
-//     //Now to make the password!
-//     var arrpasscode = [];
-//     if (arrchar.lenght<1) {
-//       alert("You did not select any characters");
-//       return null;
-//     } else {
-//       for (var i = 0; i < numCharacter; i++) {
-//         randchar = Math.floor(Math.random() * Math.floor(arrchar.length));
-//         var randnum = parseInt(randchar);
-//         arrpasscode = arrpasscode.concat([arrchar[randnum]]);
-
-//         //arrpasscode = arrpasscode.concat([arrchar[parseInt(Math.floor(Math.random() * Math.floor(arrchar.length)))]]);
-//       }
-//     }
-//     console.log(arrpasscode);
-//     var passcode = arrpasscode.join('');
-//     console.log(passcode);
-//     return passcode;
-// }
-// // Write password to the #password input
-
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-
-// }
-
-// // Use add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
-
-// // example from website
-// // max(...values: number[]): number
-// // function generate (length = 8) {
-// // 	var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-// // 	var lowercase = 'abcdefghijklmnopqrstuvwxyz';
-// // 	var numbers = '0123456789';
-// // 	var symbols = '~!@#$%^&*()_+`-=,./?';
-
-// // 	var a = Math.max (128)
-// // 	var all = uppercase + lowercase + numbers + symbols;
-
-// // 	var password = '';
-// // 	// modify to create flow control using if else
-// // 	for (var index = 0; index < length; index++) {
-// // 		var character = Math.floor(Math.random() * all.length);
-// // 		password += all.substring(character, character + 1);
-// // 	}
-
-// // 	return password;
-
-document.querySelector('#myBtn').addEventListener('click', generatePassword(upperCase));
+// document.querySelector('#myBtn').addEventListener('click', askQuestions());
