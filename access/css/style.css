@@ -4,20 +4,6 @@ title {
 .container {
 	background-color: whitesmoke;
 }
-/* .content {
-	width: 80%;
-	border: 1% solid green;
-	padding: 2px;
-	margin: ;
-} */
-/* margin-top: 12px;
-	margin-bottom: 12px;
-	background-color: rgb(20, 122, 139);
-	padding: 3px;
-	width: 60%;
-	justify-content: center;
-	color: ivory;
-} */
 
 #display {
 	background-color: lightpink;
@@ -37,4 +23,5 @@ button {
 	flex-shrink: inherit;
 	color: red;
 	font-weight: bold;
+	font-size-adjust: inherit;
 }
