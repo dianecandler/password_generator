@@ -1,24 +1,40 @@
-.container {
-	background-color: purple;
+title {
+	color: red;
 }
-.content {
-	margin-top: 12px;
-	margin-bottom: 12px;
-	background-color: green;
-	padding: 5px;
+.container {
+	background-color: whitesmoke;
+}
+/* .content {
 	width: 80%;
+	border: 1% solid green;
+	padding: 2px;
+	margin: ;
+} */
+/* margin-top: 12px;
+	margin-bottom: 12px;
+	background-color: rgb(20, 122, 139);
+	padding: 3px;
+	width: 60%;
 	justify-content: center;
 	color: ivory;
-}
+} */
+
 #display {
-	background-color: grey;
-	margin-top: 12px;
-	margin-bottom: 12px;
-	padding: 20px;
-	color: aqua;
-	width: 50%;
-	justify-content: top;
-}
-textarea {
+	background-color: lightpink;
 	color: white;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding: 10px;
+	width: 50%;
+	height: 6%;
+	justify-content: center;
+}
+button {
+	padding: 5%;
+}
+#putPassHTML {
+	font-size: small;
+	flex-shrink: inherit;
+	color: red;
+	font-weight: bold;
 }

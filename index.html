@@ -24,7 +24,9 @@
 		numbers 0-9, and symbols !@#$%^&*()?><+_-=
 	4.  If, else response <8 or >128, send back to ask
 	5.  create string of options for password
-	6.  Set up response box and Math -->
+	6.  create function to understand which characters to include
+	7.  create function to put it all together
+ -->
 
 	
 	<div class="container">
@@ -33,17 +35,11 @@
 		
 			<div class="col-lg-6 col-sm-12">
 				<div class="content">
-					<h4>Password Generator</h4>
-					<br>
-					<textarea readonly placeholder="Your Secure Password!" id="display"></textarea> 
-					<br>
-					<textarea resize=none id="passwordgoeshere" readonly="textareaEdit" rows="2" col="8";></textarea>
-					<h1 id="exampleya"></h1>
+					<h1 id="putPassHTML"></h1>
 					<br>
 					<!-- ADD CLICK DATA FROM JS INSIDE " -->
 				<!-- generate button to start creating password -->
 					<button onclick="askQuestions()">Generate Password</button>
-				<!-- answer box??  Not quite right yet -->
 				<br>
 				</div>
 			</div>

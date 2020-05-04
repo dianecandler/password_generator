@@ -126,8 +126,8 @@ function askQuestions () {
 		finalpassword = finalpassword + letterAdd.toString();
 	}
 	//make code to put password on html
-	var exampleya = document.getElementById('exampleya');
-	exampleya.textContent += finalpassword;
+	var putPassHTML = document.getElementById('putPassHTML');
+	putPassHTML.textContent += finalpassword;
 }
 
 // document.querySelector('#myBtn').addEventListener('click', askQuestions());
