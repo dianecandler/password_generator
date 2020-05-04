@@ -5,7 +5,7 @@
 	4. confirm - upper, lower, number, symbols
 	5. if yes bring varible and run / if no ask them to try again when ready
 	6. display password
-*/goit
+*/
 
 // defining global varables (cannot get letters to stick to 1 line!)
 let upperCase = [
