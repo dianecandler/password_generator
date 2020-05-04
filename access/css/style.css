@@ -32,7 +32,9 @@ title {
 button {
 	padding: 5%;
 }
-#exampleya {
+#putPassHTML {
 	font-size: small;
 	flex-shrink: inherit;
+	color: red;
+	font-weight: bold;
 }
