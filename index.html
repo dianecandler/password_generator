@@ -1,34 +1,33 @@
+<!-- HW-03 workflow:  
+	1.  "Alert"" how many characters they want in their password btn 8-128
+	2. 	Set up variables to create password
+	3.  "Alert" how many of each upperCase letters, lowerCase letters, 
+		numbers 0-9, and symbols !@#$%^&*()?><+_-=
+	4.  If, else response <8 or >128, send back to ask
+		and test for null, letters, invalid entries
+	5.  create string of options for password
+	6.  create function to understand which characters to include
+	7.  create function to put it all together
+ -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Random Password Generator</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="access/css/style.css" />
-
-
-	    
 </head>
+
 <body>
 	<!-- set-up navbar -->
 	<nav class="navbar navbar-dark bg-dark">
 		<!-- CHANGE BRAND TO NAME -->
 		<a class="navbar-brand" href="#">Random Password Generator</a>
 	</nav>
-<!-- set-up container under navbar -->
-<!-- workflow:  
-	1.  "Alert"" how many characters they want in their password btn 8-128
-	2. 	Set up variables to create password
-	3.  "Alert" how many of each upperCase letters, lowerCase letters, 
-		numbers 0-9, and symbols !@#$%^&*()?><+_-=
-	4.  If, else response <8 or >128, send back to ask
-	5.  create string of options for password
-	6.  create function to understand which characters to include
-	7.  create function to put it all together
- -->
 
-	
+	<!-- set-up container under navbar -->
 	<div class="container">
 
 		<div class="row">
@@ -38,61 +37,17 @@
 					<h1 id="putPassHTML"></h1>
 					<br>
 					<!-- ADD CLICK DATA FROM JS INSIDE " -->
-				<!-- generate button to start creating password -->
-					<button onclick="askQuestions()">Generate Password</button>
+					<!-- generate button to start creating password -->
+					<button onclick="askQuestions()">Click to Generate Password</button>
 				<br>
 				</div>
 			</div>
 		</div>
 	</div>
 
-<!-- look at Week 3 Class Activity 01 for assistance - Code Disection -->
-<!-- 1. Title and title style for project
-	 2. Create question Text box to loop through questions 
-	 3. create guidance text 
-	 4. Prompt #1 user to select password 8-128, If user password don't provide password
-		  If user > 8 return, not enough characters
-		  If user > 128, too many characters  
-	 5. create ALERT for guide user who fail to select variable 
-	 6. Prompt #2:  create prompt to query through 4 varibles
-	 	  UpperCase?
-		  LowerCase
-		  Numbers
-		  Symbols
-	 7.  Generate password using loop array string
-	 8.  Code for null response because criteria not selected
-	-->
-<!-- use:https://github.com/the-Coding-Boot-Camp-at-UT/UT-AUS-FSF-PT-04-2020-U-C-MTTH/tree/master/01-Class-Content/03-JavaScript/01-Activities/01-CodeDissection -->
-
-	<!-- <div style="width:320px;margin:10% auto 0 auto;text-align:center">
-		<button id="generate">Generate</button>
-		<input id="password" type="text" placeholder="Your password...">
-	</div> -->
-
-<script src="access/scripts.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="access/scripts.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
-<!-- 
-Alert must select at least one of these to create password
-
-
-This needs to be actionable:  
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-Provide an alert if too many or too few characters
-Need to learn to code with only the number
-
-Action:  Generate password
-
-LOOK AT CLASS ACTIVITY 01 -->
-	<!-- <script src="generator.js" async></script>
-	<script>
-		window.onload = function (){
-			var generateButton = document.querySelector('#generate');
-			generateButton.addEventListener('click', function(){				
-				document.querySelector('#password').value = generate();
-			});
-		} -->
