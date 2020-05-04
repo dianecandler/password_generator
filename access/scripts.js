@@ -5,7 +5,7 @@
 	4. confirm - upper, lower, number, symbols
 	5. if yes bring varible and run / if no ask them to try again when ready
 	6. display password
-*/
+*/goit
 
 // defining global varables (cannot get letters to stick to 1 line!)
 let upperCase = [
@@ -72,10 +72,6 @@ let finalpassword = '';
 // GENERATE PASSWORD button (ties to html line below)
 /*<button onclick="askQuestions()">Generate Password</button> */
 
-// function myfunction () {
-// 	alert('Generate Password');
-// }
-// function to
 function generatePassword (pizzaface) {
 	console.log('Look below');
 	for (var i = 0; i < pizzaface.length; i++) {
@@ -129,5 +125,3 @@ function askQuestions () {
 	var putPassHTML = document.getElementById('putPassHTML');
 	putPassHTML.textContent += finalpassword;
 }
-
-// document.querySelector('#myBtn').addEventListener('click', askQuestions());
