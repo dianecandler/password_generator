@@ -1,4 +1,13 @@
-// defining global varables
+/* Psuedo Code for Generate Password
+	1. create global variables 
+	2. link submit button on-click to deliver function called generatePassword
+	3. after prompt asks how many characters between 8-128
+	4. confirm - upper, lower, number, symbols
+	5. if yes bring varible and run / if no ask them to try again when ready
+	6. display password
+*/
+
+// defining global varables (cannot get letters to stick to 1 line!)
 let upperCase = [
 	'A',
 	'B',
@@ -60,21 +69,9 @@ let symbol = [ '`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '*', '(', ')', 
 let passwordarr = [];
 let finalpassword = '';
 
-// button code from index.html below
-/* <button onclick="myFunction()">Generate Password</button> */
+// GENERATE PASSWORD button (ties to html line below)
 
-function myfunction () {
-	alert('Generate Password');
-}
 
-/*
-1. create global variable - done  
-2. link submit button on-click to deliver function called generatePassword
-3. after prompt asks how many characters between 8-128
-4. confirm - upper, lower, number, symbols
-5. if yes bring varible and run / if no ask them to try again when ready
-6. display password
-*/
 function generatePassword (pizzaface) {
 	console.log('Look below');
 	for (var i = 0; i < pizzaface.length; i++) {
@@ -82,7 +79,7 @@ function generatePassword (pizzaface) {
 		passwordarr.push(pizzaface[i]);
 	}
 }
-
+// ask for password length - create conditions if not within range, letters, blank
 function askQuestions () {
 	//ask how many characters you want
 	var characterprompt = prompt('How many characters do you want in your password, must be between 8 and 128', '10');
@@ -98,7 +95,7 @@ function askQuestions () {
 			alert('number is valid');
 		}
 	}
-	//ask for what type of characters you want
+	//ask for what type of characters you want (define r as true)
 	var r = confirm('Do you want UpperCase Letters?');
 	if (r == true) {
 		generatePassword(upperCase);
@@ -115,18 +112,16 @@ function askQuestions () {
 	if (r == true) {
 		generatePassword(symbol);
 	}
-	//tell use if password does not contain any characters
+	//tell user if password does not contain any characters
 	if (passwordarr.length < 1) {
 		return alert('there are no characters for the password');
 	}
-	//now to put it all together
+	//put desired length, letters, numbers, symbols all together
 	for (var incrementingnumber = 0; incrementingnumber < numCharacters; incrementingnumber++) {
 		var letterAdd = passwordarr[Math.floor(Math.random() * passwordarr.length)];
 		finalpassword = finalpassword + letterAdd.toString();
 	}
 	//make code to put password on html
-	var exampleya = document.getElementById('exampleya');
-	exampleya.textContent += finalpassword;
+	var putPassHTML = document.getElementById('putPassHTML');
+	putPassHTML.textContent += finalpassword;
 }
-
-// document.querySelector('#myBtn').addEventListener('click', askQuestions());
