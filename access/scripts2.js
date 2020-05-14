@@ -5,9 +5,10 @@
 	4. confirm - upper, lower, number, symbols
 	5. if yes bring varible and run / if no ask them to try again when ready
 	6. display password
+	7. replace last password with new if function repeated
 */
 
-// defining global varables (cannot get letters to stick to 1 line!)
+// define global varables
 let upperCase = [
 	'A',
 	'B',
@@ -71,7 +72,6 @@ let finalpassword = '';
 
 // GENERATE PASSWORD button (ties to html line below)
 
-
 function generatePassword (pizzaface) {
 	console.log('Look below');
 	for (var i = 0; i < pizzaface.length; i++) {
@@ -123,5 +123,8 @@ function askQuestions () {
 	}
 	//make code to put password on html
 	var putPassHTML = document.getElementById('putPassHTML');
-	putPassHTML.textContent += finalpassword;
+	putPassHTML.textContent = finalpassword;
+	// Empty password to start fresh
+	passwordarr = [];
+	finalpassword = '';
 }

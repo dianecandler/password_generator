@@ -5,13 +5,15 @@
 	width: 80%;
 	padding: 5px;
 	margin: 10%;
-	font-size: small;
+	font-size: medium;
 	flex-shrink: inherit;
-	font-weight: lighter;
+	font-weight: bold;
 	flex-wrap: wrap;
+	word-break: break-all;
+	word-wrap: inherit;
 	color: lightpink;
 }
 h1 {
 	flex-wrap: wrap;
-	font-size: small;
+	font-size: medium;
 }

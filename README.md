@@ -1,56 +1,9 @@
 03 JavaScript: Password Generator
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+This application is designed to generate a user-selected random password containing 8 to 128 characters.  
 
-If you are unfamiliar with special characters, take a look at some examples.
+The program is designed to run in the brower using HTML and CSS with JavaScript managing the bulk of the work.
 
-User Story
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-Acceptance Criteria
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria (when is not action but then is)
-Query through they want each of these:
- Prompt #2
-  Uppercase
-  lowercase
-  numbers
-  symbols
-  Alert must select at least one of these to create password
+If security is important, this is an excellent tool to help generate complex, cyber-safe random passwords.
 
-
-This needs to be actionable:  
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-
-    Prompt #1 user to select password 8-128, If user password don't provide password
-    If user > 8 return, not enough characters
-    If user > 128, too many characters
-Provide an alert if too many or too few characters
-Need to learn to code with only the number
-
-Action:  Generate password
-
-LOOK AT CLASS ACTIVITY 01
-
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-The following image demonstrates the application functionality:
-
-password generator demo
-
-Review
-You are required to submit the following for review:
-
-The URL of the deployed application.
-
-The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
+URL:  https://dianecandler.github.io/password_generator/
+GitHub Repository:  https://github.com/dianecandler/password_generator
